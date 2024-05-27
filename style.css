@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+.main {
+    width: 100vw;
+    padding: 10rem 5vw;
+    padding-bottom: 0;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    background: #111;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 0vw 0vw;
+}
+
+
+
+.main nav #underline {
+    height: 1px;
+    background-color: #111;
+    border-bottom: 1px solid white;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.4s ease;
+}
+
+
+.main nav .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5vw;
+}
+
+.main nav .navbar .logo svg {
+    height: 1.4rem;
+    width: 12rem;
+}
+
+.main nav .navbar .list-wrapper {
+    position: relative;
+}
+
+.navbar .list-wrapper ul {
+    display: flex;
+    gap: 1.4rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.list-wrapper ul a {
+    text-decoration: none;
+}
+
+.list-wrapper ul li {
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.list-wrapper .extend-list {
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    gap: 3.2rem;
+    cursor: pointer;
+    padding-top: 1rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.list-wrapper .extend-list:hover {
+    padding-top: 1rem;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.navbar .list-wrapper ul:hover~.extend-list {
+    padding-top: 1rem;
+    opacity: 1;
+    pointer-events: all;
+    display: flex;
+}
+
+.list-wrapper .extend-list ul:nth-child(2) {
+    position: relative;
+    left: 1.4rem;
+}
+
+.list-wrapper .extend-list ul:nth-child(3) {
+    position: relative;
+    left: -0.8rem;
+}
+
+.list-wrapper .extend-list ul:nth-child(4) {
+    position: relative;
+    left: -0.6rem;
+}
+
+.list-wrapper .extend-list ul:nth-child(5) {
+    position: relative;
+    left: 0.6rem;
+}
+
+.list-wrapper .extend-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.list-wrapper .extend-list ul li {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+
+.list-wrapper ul li:hover {
+    color: rgb(82, 82, 82);
+}
+
+.main nav .navbar .lets-talk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.navbar .lets-talk .lets-talk-bg {
+    height: 3rem;
+    width: 12rem;
+    border-radius: 40px;
+    background-color: #0DA34E;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+
+.navbar .lets-talk .lets-talk-content {
+    height: 3rem;
+    width: 12rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: transparent;
+    gap: 2rem;
+}
+
+.navbar .lets-talk .lets-talk-content svg {
+    height: 1.2rem;
+    width: 1.3rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.container .title {
+    font-size: 10vw;
+    text-align: center;
+    line-height: 10rem;
+    padding: 8vw 0vw 4vw 0vw;
+    pointer-events: none;
+}
+
+
+
+.container span svg {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    background-color: #0DA34E;
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.container span svg:hover {
+    transform: rotate(-30deg);
+}
+
+.container .sub-heading {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    pointer-events: none;
+}
+
+.container .sub-heading span {
+    border: 1px solid rgba(156, 156, 156, 0.51);
+    padding: 0.3rem 0.8rem;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.scroll-wrap {
+    display: flex;
+    gap: 4rem;
+    width: 60vw;
+    overflow-x: hidden;
+    margin: 8rem auto;
+    position: relative;
+}
+
+.infinity-scroll {
+    display: flex;
+    gap: 4rem;
+    position: relative;
+    animation: anim;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroll {
+    position: relative;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.scroll-wrap .scroll-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(17, 17, 17, 1) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@keyframes anim {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 1075px;
+    }
+}
+
+.page2 {
+    display: flex;
+    justify-content: space-between;
+    height: 720px;
+    border-top: 1px solid rgb(88, 88, 88);
+}
+
+.page2 .page2-left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0rem;
+}
+
+.page2 .page2-left div:nth-child(2) {
+    font-size: 1.4rem;
+}
+
+.page2 .page2-right {
+    width: 50%;
+    height: 100%;
+    background-color: #0DA34E;
+}
+
+.page2 .page2-right .page2-cards {
+    background-color: #111;
+    height: 25%;
+    padding: 1rem 0rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-top: 1px solid grey;
+}
+
+.page2 .page2-right .page2-cards:nth-child(1) {
+    border-top: none;
+}
+
+.page2 .page2-right .page2-cards:hover {
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+.page2-right .page2-cards .cursor {
+    height: 80%;
+    width: 50%;
+    clip-path: circle();
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -50%);
+    scale: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+
+.page2-cards .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+}
+
+.page2-cards .wrapper h2 {
+    width: 60%;
+    background: transparent;
+    font-weight: 500;
+}
+
+.page2-cards .wrapper div {
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    padding: 0rem 1rem;
+    cursor: pointer;
+    position: relative;
+    color: grey;
+}
+
+.page2-cards .wrapper div span:nth-child(1) {
+    position: absolute;
+    transform: translate(-50%, 50%);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.page2-cards .wrapper div span:nth-child(2) {
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.page2-cards .wrapper div span {
+    color: white;
+}
+
+.page2-cards .wrapper div span svg {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    fill: white;
+}
+
+.reel {
+    background-color: #fff;
+    height: 600px;
+    position: relative;
+    left: -5vw;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.reel video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease;
+    transform-origin: 0%;
+    z-index: 999;
+}
+
+.reel .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reel .playbtn {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reel .playbtn svg {
+    height: 180px;
+    width: 180px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.reel .playbtn span {
+    color: black;
+    background-color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 800;
+    position: relative;
+    top: 2rem;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.stories {
+    /* border: 2px solid green; */
+    background: #fff;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+.story {
+    height: 720px;
+    width: 100%;
+    display: flex;
+    padding: 10rem 5vw 3vw 10rem;
+}
+
+.stories .stories-left {
+    font-size: 3.5rem;
+    width: 50%;
+    padding-right: 18%;
+    font-weight: 700;
+}
+
+.stories .stories-right {
+    /* border: 2px solid green; */
+    height: 100%;
+    font-size: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.stories .stories-right .mainHeading .heading {
+    text-transform: uppercase;
+    color: #a7a7a7;
+    font-size: 1.2rem;
+    padding: 0rem 0rem 2rem 0;
+}
+
+.data {
+    height: 720px;
+    background: #fff;
+    color: #111;
+    height: 100%;
+    /* border: 2px solid green; */
+    padding: 5rem 5vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+}
+
+.data .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.data .cards h1 {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.data .cards p {
+    font-size: 0.9rem;
+}
+
+.data .cards span {
+    color: #a8a8a8;
+}
+
+.about {
+    min-height: 500px;
+    color: #111;
+    background-color: #fff;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    padding: 5vw;
+}
+
+.about .about-container {
+    height: 70%;
+    width: 70%;
+    font-size: 2.3rem;
+}
+
+.about .about-container .container-top {
+    float: left;
+    font-size: 1rem;
+    width: 16rem;
+    position: relative;
+    padding-top: 0.8rem;
+}
+
+.pikaAI {
+    height: 700px;
+    width: 100vw;
+    padding: 5rem 5vw;
+    color: #111;
+    background-color: #fff;
+    display: flex;
+    gap: 2rem;
+}
+
+.pikaAI .pikaAI-left {
+    height: 100%;
+    width: 25%;
+    border-top: 2px solid #f1f1f1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+.pikaAI .pikaAI-left:hover {
+    border-top: 2px solid #2e2e2e;
+}
+
+.pikaAI .pikaAI-left h1 {
+    display: flex;
+    gap: 3rem;
+}
+
+.pikaAI .pikaAI-left h1 div {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.pikaAI .pikaAI-left h1 .arrows {
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pikaAI .pikaAI-left h1 svg:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.pikaAI .pikaAI-left h1 svg:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, 50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.pikaAI .pikaAI-left .arrows svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.pikaAI .pikaAI-left p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10rem;
+    font-size: 1.2rem;
+}
+
+.pikaAI .pikaAI-right {
+    height: 94%;
+    width: 75%;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.pikaAI .pikaAI-right img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: #1562f0;
+}
+
+.pikaAI .pikaAI-right video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
