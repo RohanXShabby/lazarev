@@ -79,7 +79,8 @@ function videoPause() {
 
     let Reelvideo = document.getElementById("reelVid");
 
-    Reelvideo.addEventListener("click", function () {
+    Reelvideo.addEventListener("click", function (e) {
+        e.preventDefault(
         // console.log("Video clicked"); //to check if the event listener is triggered
         Reelvideo.pause();
         Reelvideo.style.height = "0%";
